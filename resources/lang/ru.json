@@ -1,0 +1,20 @@
+{
+  "Reset Password Notification": "Смена пароля",
+  "Hello": "Привет",
+  "Hello!": "Привет!",
+  "You are receiving this email because we received a password reset request for your account.": "Вы получили это письмо, потому что мы получили запрос на сброс пароля для вашей учетной записи.",
+  "Reset Password": "Сменить пароль",
+  "This password reset link will expire in :count minutes.": "Эта ссылка для сброса пароля истечет через: 60 минут.",
+  "If you did not request a password reset, no further action is required.": "Если вы не запрашивали сброс пароля, никаких дальнейших действий не требуется.",
+  "Regards": "С уважением",
+  "Update Your Password": "Обновите свой пароль",
+  "This is a secure area of the application. Please confirm your password before continuing.": "Это безопасная область приложения. Пожалуйста, подтвердите свой пароль, прежде чем продолжить.",
+  "Password": "Пароль",
+  "Use 8 or more characters with a mix of letters, numbers & symbols.": "Используйте 8 или более символов, состоящих из букв, цифр и символов.",
+  "Confirm Password": "Подтвердите пароль",
+  "Submit" : "Далее",
+  "Please check your email to proceed with the password reset.": "Пожалуйста, проверьте свою электронную почту, чтобы продолжить сброс пароля.",
+  "Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\\'t receive the email, we will gladly send you another.": "Спасибо за регистрацию! Прежде чем начать, не могли бы вы подтвердить свой адрес электронной почты, нажав на ссылку, которую мы вам только что отправили? Если вы не получили письмо, мы с радостью отправим вам другое.",
+  "The given data was invalid": "Ddd",
+  "The value is not a valid email address": "ddddd"
+}

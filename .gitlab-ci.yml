@@ -1,0 +1,18 @@
+stages:
+  - deploy
+
+variables:
+  TAG_LATEST: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:latest
+  TAG_COMMIT: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
+
+deploy:
+  image: alpine:latest
+  stage: deploy
+  script:
+    - chmod og= $ID_RSA
+    - apk update && apk add openssh
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $REMOTE_USER@$DEV_HOST "cd $DEV_DIR && git fetch && git checkout $CI_COMMIT_REF_NAME && git pull origin $CI_COMMIT_REF_NAME"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $REMOTE_USER@$DEV_HOST "cd $DEV_DIR && php74 artisan migrate && php74 /usr/local/bin/composer.ship install"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $REMOTE_USER@$DEV_HOST "chown esk-solutions.com:nginx $DEV_DIR -R"
+  only:
+    - master
